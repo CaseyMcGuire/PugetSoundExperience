@@ -1,0 +1,146 @@
+$maroon: #660000;
+$maroon-constrast: whitesmoke;
+$dark-gray: #222222;
+$dark-gray-constrast: whitesmoke;
+
+.webcam 
+{
+	border: 1px solid #021a40;
+	width: 75%;
+	display:block;
+  margin:auto;
+  border: 3px solid $dark-gray;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media all and (max-width: 1000px)
+{
+	.jumbotron
+	{
+		width: 100%;
+	}
+	.webcam
+	{
+		width: 100%
+	}
+}
+
+.kups
+{
+	text-align: center;
+
+}
+
+iframe
+{
+
+	width: 100%;
+}
+
+.twitter-background
+{
+	background-color: #C5DEFA;
+	padding: 15px 15px 15px 15px;
+	display:inline-block;
+	text-align:center;
+	float: center;
+	border: 2px solid $dark-gray;
+}
+
+#twitter-widget-0
+{
+	text-align: center;
+	margin: auto;
+}
+
+@media all and (min-width: 1000px)
+{
+	.jumbotron
+	{
+		width: 75%;
+	}
+	.webcam
+	{
+		width: 75%;
+	}
+}
+
+
+.jumbotron
+{
+	// background-image: url(/images/tree_bark.png);
+	background-image: url(/images/symphony.png);
+	background-color: #F2D3D4;
+	// width: 75%;
+	margin: 0 auto;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+	border: 3px solid $dark-gray;
+	border-top: none;
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+body
+{
+	background: url("http://upload.wikimedia.org/wikipedia/commons/7/7f/Mount_Rainier_National_Park_map-en.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1
+{
+	text-align: center;
+}
+
+h2
+{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.text
+{
+	text-align: left;
+	font-size: 17px;
+	border: 3px solid $dark-gray;
+	background-color: #CBE0F7;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding: 30px 20px 30px 20px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 25px;
+}
+
+.image
+{
+	border: 20px solid $dark-gray;
+}
+
+.test
+{
+	background: url("http://upload.wikimedia.org/wikipedia/commons/7/7f/Mount_Rainier_National_Park_map-en.jpg") no-repeat center center fixed; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+
+
+<div class="top-bottom">
+ 
+  <div class="navigation-arrows">
+
+  <div class="left-arrow"> 
+  <%= link_to tour_stop_path(@location.previous) do %>
+    <img src="/images/left_arrow.png" />
+    Previous Location
+  <% end %>
+   </div>  
+  <div class="right-arrow">
+  <%= link_to tour_stop_path(@location), :id => "next-link" do %>
+  Next Location
+    <img src="/images/right_arrow.png" />
+
+  <% end %>
+  </div>
+</div>
+</div>
+
+
+
+<%= content_tag "div", id: "current-location", data: {location:@location} do %>
+
+<% end %>
+
+<%= content_tag "div", id: "all-locations", data: {locations: @all_locations} do %>
+
+<% end %>
+
+<%= content_tag "div", id: "previous-location", data: {previous_location: @previous_location} do %>
+
+<% end %>
+
+<div id="map-canvas"></div>
+

@@ -1,0 +1,40 @@
+
+  <div class="top-bottom">
+    <div class="navigation-arrows">
+
+      <div class="left-arrow">
+      <%= link_to location_path(@location) do %>
+      
+      <img src="/images/left_arrow.png" />
+      Previous Location
+      
+      <% end %>
+      </div>
+     
+      <div class="right-arrow"> 
+      <%= link_to location_path(@location.next) do %>
+     
+        Next Location
+        <img src="/images/right_arrow.png" />
+     
+      <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron">
+  <h1 class="info-title"><%= @location.name %></h1>
+   
+  <div>     
+    <div id='ninja-slider'>
+      <ul>
+        <% @location.pictures.each do |picture| %>
+        <li><div data-image="<%= picture %>"></div></li>
+        <% end %>
+
+      </ul>
+    </div>
+  </div>
+
+  <p><%= @location.long_description %></p>
+
+</div>

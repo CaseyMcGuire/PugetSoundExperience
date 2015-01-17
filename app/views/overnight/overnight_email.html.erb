@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      <%= @user.name %> would like to schedule an overnight for <%= @user.date %>
+    </p>
+    <p>
+      <%= @user.name %>'s contact info:
+      <ul>
+        <li> email: <%= @user.email %></li>
+        <li> phone: <%= @user.phone %></li>
+      </ul>
+    </p>
+  </body>
+</html>

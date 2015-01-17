@@ -1,0 +1,344 @@
+// Place all the styles related to the Locations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+ *= require unsemantic-grid-responsive-tablet
+*/
+body{
+    font-family: Garamond, EB Garamond, Georgia, serif;
+   
+}
+
+table, th, td, tr
+{
+  /*height: 10px;*/
+  border: 2px solid #CCCCCC;
+}
+
+.menu {
+  //  float: left;
+    width: 100%;
+}
+
+.menu .menu-item {
+    border-bottom: 1px solid #CCCCCC;
+   // float: left;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #f6f6f6;
+    color: #535353;
+    margin: 0 auto;
+}
+
+.menu .menu-item .location-picture {
+   // clear: left;
+   // float: left;
+    display: inline;
+   // margin-right: 10px;
+   // overflow: hidden;
+   // width: 20%;
+}
+
+.menu .menu-item .location-picture img{
+    width:70px;
+
+    height: auto;
+}
+
+.menu .menu-item .location-info {
+    display: inline;
+}
+
+.menu .menu-item .location-info .location-name {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #4D4D4D;
+}
+
+.menu .menu-item .location-info .location-desc {
+    font-size: 10px;
+    margin: 0;
+    color: #757575;
+}
+
+.menu .menu-item .location-text{
+  //  float: right;
+   // width: 75%;
+}
+
+.location-name .location-desc{
+ // overflow: hidden;
+}
+
+
+
+.menu a{
+     color: inherit; 
+}
+
+.left-arrow a{
+	    color: inherit;
+}	    
+
+.right-arrow a{
+	     color: inherit;
+}
+
+#logo{
+    float: left;
+    display: inline-block;
+    zoom: 0.3;
+}
+
+.top-top{
+    width: 100%;
+    background-color: #222222;
+    padding-bottom: 110px;
+    padding-left: 20px;
+}
+
+.top-bottom{
+    width: 100%;
+    background-color: #ddd;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.navigation-arrows{
+	overflow: auto;
+}
+
+html, body, #map-canvas{
+  height:100%;
+  width: 100%;
+  padding: 0px;
+}
+
+#menu-icon{
+  float: right;
+  padding-top: 15px;
+}
+
+.small-pic{
+    max-width: 150px;
+}
+
+.dropdown{
+    float: left;
+    margin-left: 0.5cm;
+    margin-top: 1cm;
+    width: 100px;
+}
+
+.dropdown-button
+{
+     //width: 75%;
+
+}
+
+.right-arrow{
+	float: right;
+}
+
+.left-arrow{
+	float: left;
+}
+
+#map-canvas{
+	width: 100%;
+	height: 100%;
+}
+
+#logo-small2
+{
+	background: url('http://www.pugetsound.edu/images/icons.png');
+	color: transparent;
+	display: block;
+	float: left;
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+	text-indent: 100%;
+	top: 0px;
+	white-space: nowrap;
+	width: 100px;
+	z-index: 8;
+	background-position: -210px -70px;
+}
+
+
+#current-location{
+    display: none;
+}
+
+#all-locations{
+    display: none;
+}
+
+.gm-style-iw{
+    width: 150px;
+    text-align: center;
+}
+
+.navbar
+{
+	background-color: #222222;
+	border-color: #222222;
+	height: 110px;	
+}
+
+
+.navbar-default
+{
+	height: 110px;	
+	font-size: 20px;
+	text-align: center;
+	height: 10px;
+}
+/* Visit http://www.menucool.com/responsive-slider for instructions */
+
+#ninja-slider
+{
+    width:100%;
+    margin:0 auto; /*center aligned*/
+    background:#222;
+}
+#ninja-slider > ul
+{
+    padding:20px 0;
+}
+
+/* slide */
+#ninja-slider li > div, #ninja-slider li > a
+{
+    max-width:960px;
+    margin:0 auto; /* center each slide */
+    border-radius:6px;
+    /*background:#999;*/
+    position: relative;
+    display:block;
+    box-shadow: 0 1px 5px rgba(0,0,0,.8),inset 0 0 1px rgba(255,255,255,.4);
+    transition:none!important;
+}
+
+/* loading image indicator */    
+#ninja-slider div.preload 
+{
+    background: black url(img/loading.gif) no-repeat center center;
+}
+
+/*----- video -----*/
+#ninja-slider a.video 
+{
+	position:absolute;
+    border:0;top:0;left:0;
+	width:100%;height:100%;
+	background:transparent url(img/video.png) no-repeat 50% 50%;
+    transition:none!important;
+}
+  
+/*------ pager ------*/      
+/* The pager id should be: slider id + "-pager" */    
+#ninja-slider-pager
+{
+    padding-top:12px; /* set the distance away from the slider */
+    margin:0 auto; /* center align */
+    text-align:center;
+    display:table;
+    font-size:0;
+}
+         
+#ninja-slider-pager a 
+{
+    display:inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #CCCCCC;
+    font-size:0;
+    margin:2px 6px;
+    cursor:pointer;
+    border-radius:10px;
+    box-shadow:inset 0 1px 3px #666666;
+}
+#ninja-slider-pager a:hover 
+{
+    opacity:0.6;
+}
+#ninja-slider-pager a.active 
+{
+    background-color:#1293dc;
+    box-shadow:inset 0 1px 3px -1px #28b4ea,0 1px 1px rgba(0,0,0,.5);
+    background-image:linear-gradient(top,#1293dc,#0f6297);
+}
+ 
+/* --------- navigation controls ------- */   
+/* The nav id should be: slider id + ("-prev", "-next", and "-pause-play") */    
+#ninja-slider-prev, #ninja-slider-next
+{
+    position: absolute;
+    top: 40%;
+    width:64px;
+    height:64px;
+    display:inline-block;
+    margin:0;
+    background-image: url(img/navs.png);
+}
+#ninja-slider-prev {
+    left: 0;
+    background-position:0 0;
+}
+#ninja-slider-prev:hover {background-position:0 -64px;}
+
+#ninja-slider-next {
+    right: 0;
+    background-position:-64px 0;
+}
+#ninja-slider-next:hover {background-position:-64px -64px;}
+
+#ninja-slider-pause-play { display:none;}
+
+
+
+/*------- Settings that usually don't need to change ------- */
+#ninja-slider > ul
+{
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#ninja-slider-pager, #ninja-slider-prev, #ninja-slider-next, #ninja-slider-pause-play
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#ninja-slider
+{
+    position: relative;
+    overflow: hidden;
+    /*visibility: hidden;*/
+    padding:0;
+}
+#ninja-slider > ul
+{
+    overflow: hidden;
+    position: relative;
+    list-style:none;
+    margin:0;
+}
+
+#ninja-slider > ul > li
+{
+    float: left;
+    width: 100%;
+    position: relative;
+    list-style:none;
+    padding:0;margin:0;
+}
+

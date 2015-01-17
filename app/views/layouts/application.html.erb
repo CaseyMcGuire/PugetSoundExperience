@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <title>Puget Sound Experience</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class = "test">
+
+
+<div id="home-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+  <!-- Indicators -->
+  
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    
+    <div class="item active">
+      <img class="carousel-img" src="/images/carousel/schiff.jpg">
+      <div class="carousel-caption">
+        <h1 class = "title">The Puget Sound <span style = "font-style: italic;">Experience</span></h1>  
+        <br>
+        <br>
+      </div>
+    </div>
+
+
+    <div class="item">
+      <img class="carousel-img" src="/images/carousel/op.jpg">
+      <div class="carousel-caption">
+        <h1 class = "title">The Puget Sound <span style = "font-style: italic;">Experience</span></h1>
+        <br>
+        <br>
+      </div>
+    </div>
+
+    <div class="item">
+      <img class="carousel-img" src="/images/carousel/howarth.jpg">
+      <div class="carousel-caption">
+        <h1 class = "title">The Puget Sound <span style = "font-style: italic;">Experience</span></h1>
+        <br>
+        <br>
+      </div>
+    </div>
+
+    <div class="item">
+      <img class="carousel-img" src="/images/carousel/thompson.jpg">
+      <div class="carousel-caption">
+        <h1 class = "title">The Puget Sound <span style = "font-style: italic;">Experience</span></h1>
+        <br>
+        <br>
+      </div>
+    </div>
+
+  </div>
+  
+</div>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container" >
+      <div>
+        <%= link_to "", root_path, :id => 'logo-small' %>
+      </div>
+    <div class="navbar-header"></div>
+  </div>
+</nav>
+
+
+
+<div class="target">
+
+  <div class="roller-item" style = "background-image: url('http://www.pugetsound.edu/files/pages/_DSC1659.jpg');">
+    <div class = "bottom-half">
+      <h3>Look around campus</h3>
+      <%= link_to "Virtual Tour", tour_path, :class => 'btn btn-default btn-lg', method: :get %> 
+    </div>  
+  </div>
+
+
+  <div class="roller-item" style = "background-image: url('http://3.bp.blogspot.com/-g1ix8vRzcJY/UHcCajdqR2I/AAAAAAAAIsk/KuEU9iIc_EI/s1600/Mount+Rainier+Washington+11.jpg');">
+    <div class = "bottom-half">
+      <h3>The Pacific Northwest</h3>
+      <%= link_to "Visit Rainier", webcam_path, :class => 'btn btn-default btn-lg', method: :get %>
+     </div>
+  </div>
+
+
+  <div class="roller-item" style = "background-image: url('http://www.ctcl.org/sites/default/files/pugetsound12.jpg');">
+    <div class = "bottom-half">
+    <h3>Connect with current students</h3>
+        <%= link_to "Campus hangouts", cafe_path, :class => 'btn btn-default btn-lg', method: :get %> 
+    </div>
+  </div>
+
+  <div class="roller-item" style = "background-image: url('http://www.pugetsound.edu/images/vt/buildings/Wheelock_KUPS.jpg');">
+    <div class = "bottom-half">
+    <h3>Learn about student-run radio</h3>
+        <%= link_to "KUPS Radio", kups_path, :class => 'btn btn-default btn-lg', method: :get %> 
+    </div>
+  </div>
+
+   <div class="roller-item" style = "background-image: url('http://s3images.coroflot.com/user_files/individual_files/original_274298_4YOI2OmhX8BvcrIs9LziDVRbx.jpg');">
+    <div class = "bottom-half">
+    <h3>Tacoma Life</h3>
+        <%= link_to "Local Highlights", highlights_path, :class => 'btn btn-default btn-lg', method: :get %>
+    </div>
+  </div>
+
+   <div class="roller-item" style = "background-image: url('http://www2.ups.edu/dcs/dining/OC_2101.jpg');">
+    <div class = "bottom-half">
+    <h3>Visit our social media</h3>
+        <%= link_to "Connect", social_media_path, :class => 'btn btn-default btn-lg', method: :get %>
+    </div>
+  </div>
+
+   <div class="roller-item" style = "background-image: url('http://blogs.pugetsound.edu/studentlife/files/2011/04/P1050321.jpg');">
+    <div class = "bottom-half">
+    <h3>Schedule an Overnight</h3>
+        <%= link_to "Schedule Now!", overnight_form_path, :class => 'btn btn-default btn-lg', method: :get %>
+    </div>
+  </div>
+</div>
+
+
+</div>
+	
+
+  </body> 
+</html>

@@ -1,0 +1,39 @@
+<div class="top-bottom">
+  <div class="navigation-arrows">
+   <h3>Choose a Location</h3>
+  </div>
+  
+</div>
+<div class="menu">
+  
+
+  <% @locations.each do |location| %>
+  <%= link_to location_path(location) do %>
+  <div class="container menu-item">
+    <div class="row">
+   <div class="location-picture">
+     <div class="col-xs-3">
+     <img class="small-pic" src="<%= location.logo_url %>" />
+   </div>
+   </div>
+<div class="col-xs-9">
+   <div class="location-info">
+    <span class="location-text">
+     <p class="location-name"><%= location.name %></p>
+    
+     <p class="location-desc"><%= location.short_description %></p>
+   </span>
+   </div>
+   </div>
+    </div>
+   <!--<div class="clear"></div>-->
+  </div>
+
+  <% end %>
+<% end %>
+
+</div>
+ 
+
+
+

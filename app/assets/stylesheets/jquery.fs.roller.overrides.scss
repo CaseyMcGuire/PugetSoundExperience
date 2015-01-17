@@ -1,0 +1,123 @@
+$maroon: #660000;
+$maroon-constrast: whitesmoke;
+$dark-gray: #222222;
+$dark-gray-constrast: whitesmoke;
+
+/*.roller-item { 
+  height: 300px; 
+  width: 500px; 
+}*/
+
+
+@media all and (min-width: 1001px)
+{
+  .roller-item 
+  { 
+    height: 300px; 
+    width: 500px; 
+  }
+  .bottom-half
+  {
+  	width: 494px;
+  	height: 50%;
+  }
+}
+
+@media all and (max-width: 1000px)
+{
+  .roller-item 
+  { 
+    height: 350px; 
+    width: 260px; 
+  }
+  .bottom-half
+  {
+  	height: 60%;
+  	width: 254px;
+  }
+}
+
+.roller {
+	position: relative;
+	padding-right: 40px;
+	padding-bottom: 100px;
+	padding-top: 80px;
+	overflow: hidden;
+
+	.roller-control {
+		position: absolute;
+		background-color: $dark-gray-constrast;
+		// background: rgba(0,0,0,); 
+		border: 4px solid $dark-gray;
+		top: 150px;
+		margin-top: -25px;
+		line-height: 50px;
+		height: 55px;
+		text-align: center;
+
+		@media all and (min-width: 751px)
+		{
+			width: 75px;
+		}
+
+		@media all and (max-width: 750px)
+		{
+			width: 40px;
+		}
+
+			&.previous 
+			{		
+				left: 0;
+				border-top-right-radius: 50px;
+				border-bottom-right-radius: 50px;
+				border-left: none;
+			}
+
+			&.next 
+			{
+				right: 0;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 50px;
+				border-right: none;
+			}
+
+
+		&:after {
+			background: url(https://www.pugetsound.edu/images/icons.png) no-repeat;
+			content: "";
+			display: block;
+			height: 10px;
+			// left: 50%;
+			margin: -5px 0 0 -3px;
+			position: absolute;
+			top: 50%;
+			width: 7px;
+		}
+	}
+	.roller-item {
+		border: 3px solid $dark-gray;
+  	margin: 0 20px;
+  	background-color: $dark-gray;
+  	text-align: center;
+		border-bottom-right-radius: 50px;
+		border-top-left-radius: 50px;
+		background: no-repeat;
+		background-size: 100%;
+
+	}
+}
+
+
+.bottom-half
+{
+	border-top: 3px solid $dark-gray;
+	position: absolute;
+	font-family: Garamond, EB Garamond, Georgia, serif;
+	bottom: 3px;
+	
+	background-color: $maroon;
+	overflow: hidden;
+	border-bottom-right-radius: 50px;
+	background-image: url(/images/swirl_pattern.png);
+}
+

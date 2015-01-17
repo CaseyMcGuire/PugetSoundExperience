@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    <%= javascript_include_tag("https://maps.googleapis.com/maps/api/js?key=AIzaSyCqVNiaRHyWmzfhql0l9qKEUcX7lzWveto") %>
+    <%= javascript_include_tag params[:controller], :media => "all" %>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    
+    <title>Puget Sound Experience</title>
+
+   <%= stylesheet_link_tag 'locations', media: 'all', 'data-turbolinks-track' => true %>   
+   <%= stylesheet_link_tag 'webcam', media: 'all', 'data-turbolinks-track' => true %>
+
+    </script>
+  </head>
+  <body>
+
+
+<div class="top-top">
+  <!--
+  <%= link_to root_path do %>
+      <img id="logo" src="/images/logo.gif" />
+      <% end %>
+      
+  <%= link_to "", root_path, :id => 'logo-small2' %> -->
+  <div id="logo-small2"></div>
+      <div class="dropdown">
+	<button class="btn btn-default dropdown-toggle dropdown-button" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+	  Navigation Menu
+	  <span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+	  <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= root_path %>">Home</a></li>
+	  <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= tour_path %>">Tour Home</a></li>
+	  <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= webcam_path %>">Mt. Rainier</a></li>
+	  <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= kups_path %>">KUPS Radio</a></li>
+	  <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= social_media_path %>">Social Media</a></li>
+	  <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= highlights_path %>">Tacoma Highlights</a></li>
+	   <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= overnight_form_path %>">Stay Overnight</a></li>
+	  
+	</ul>
+      </div>
+      
+      <!--<img id="menu-icon" src="/images/menu_icon.png" /> -->
+      
+      
+    </div>
+
+    <!-- Puget Sound Logo needs to go here -->
+    <%= yield %>
+    
+    <!-- footer needs to go here -->
+  </body>
+  
+</html>

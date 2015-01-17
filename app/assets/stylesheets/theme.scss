@@ -1,0 +1,213 @@
+$maroon: #660000;
+$maroon-constrast: whitesmoke;
+$dark-gray: #222222;
+$dark-gray-constrast: whitesmoke;
+
+body
+{
+	// background: url("http://sherrlock.files.wordpress.com/2010/11/xwashter-map-stevens-55web11.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-size: 100%;
+}
+
+.test
+{
+	// background: url("http://upload.wikimedia.org/wikipedia/commons/2/29/1867_U.S._Coast_Survey_Chart_or_Map_of_Puget_Sound,_Washington_-_Geographicus_-_PugetSound-uscs-1867.jpg") no-repeat center center fixed; 
+	background: url(/images/topo.png);
+	
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+  // background-size: 100%;
+}
+
+.carousel-caption
+{
+
+}
+
+@media all and (min-width: 1001px)
+{
+	.title
+	{
+		font-size: 50px;
+	}
+}
+
+
+@media all and (max-width: 1000px)
+{
+	.title
+	{
+		font-size: 20px;
+	}
+	.carousel-caption
+	{
+		padding-bottom: 0;
+	}
+}
+
+
+
+.btn-default
+{
+	background-color: $maroon;
+	border-color: $maroon;
+}
+
+.btn
+{
+	color: white;
+}
+
+div.myClass 
+{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+div.myClass [class*="span"]
+{
+    display: inline-block;
+    float: none; /* Very important */
+}
+
+.container
+{
+	padding-bottom: 100px;
+
+}
+
+footer 
+{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 200px;
+	// padding: px;
+	background: $dark-gray;
+	color: $dark-gray-constrast;
+
+	ul 
+	{
+		margin-left: 200px;
+		padding-top: 40px;
+		a 
+		{ 
+			color: $dark-gray-constrast;
+		}
+	}	
+}
+
+.title
+{
+	font-family: Garamond, EB Garamond, Georgia, serif;
+	// font-size: 50px;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+
+
+
+.page-header
+{
+	background: $maroon;
+	height: 100px;
+}
+
+#logo-small
+{
+	background: url('http://www.pugetsound.edu/images/icons.png');
+	color: transparent;
+	display: block;
+	float: left;
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+	text-indent: 100%;
+	top: 0px;
+	white-space: nowrap;
+	width: 100px;
+	z-index: 8;
+	background-position: -210px -70px;
+}
+
+.navbar
+{
+	background-color: $dark-gray;
+	border-color: $dark-gray;
+	height: 110px;	
+}
+
+
+.navbar-default .navbar-brand
+{
+	height: 110px;	
+	font-size: 20px;
+	text-align: center;
+	height: 10px;
+}
+.navbar-fixed-bottom
+{
+	font-size: 15px;
+	background-color: $dark-gray;
+	text-align: center;
+	height: 60px;
+}
+
+.jumbotron
+{
+	background-image: url(/images/tree_bark.png);
+}
+
+
+.carousel-inner{
+  width: 100%;
+  height: 100%;
+}
+
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition-property: opacity;
+    }
+
+    .active {
+      opacity: 1;
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+    
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
+}
+
+.carousel-img
+{
+	width: 1920px;
+	height: 720px;
+}
+
+.bottom-half a:visited{
+	color: #9a9a9a;
+	padding-top: 1px;
+}

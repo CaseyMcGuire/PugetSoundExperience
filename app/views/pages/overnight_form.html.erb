@@ -1,0 +1,33 @@
+<div class="jumbotron">
+<h1>Schedule an Overnight</h1>
+
+<%= form_for User.new do |f| %>
+  <p>
+    Name (first and last):
+  </p>
+  <p>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    Email:
+  </p>
+  <p>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    Phone Number
+  </p>
+  <p>
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    Desired Date for Overnight (MM/DD/YYYY)
+  </p>
+  <p>
+    <%= f.text_field :date %>
+  </p>
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
+</div>

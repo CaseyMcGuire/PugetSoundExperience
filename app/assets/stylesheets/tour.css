@@ -1,0 +1,121 @@
+body{
+    font-family: Garamond, EB Garamond, Georgia, serif;
+   
+}
+
+
+.new
+{
+
+}
+table, th, td
+{
+  /*height: 10px;*/
+  border: 2px solid #CCCCCC;
+}
+
+
+.menu {
+    float: left;
+    width: 100%;
+}
+
+.menu .menu-item {
+    border-bottom: 1px solid #CCCCCC;
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #f6f6f6;
+    color: #535353;
+}
+
+.menu .menu-item .location-picture {
+    clear: left;
+    float: left;
+    display: inline;
+    margin-right: 10px;
+}
+
+.menu .menu-item .location-info {
+    float: left;
+    display: inline;
+}
+
+.menu .menu-item .location-info .location-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.menu .menu-item .location-info .location-desc {
+    font-size: 12px;
+    margin: 0;
+}
+
+.location-name .location-desc{
+  overflow: hidden;
+}
+
+a{
+    color: inherit;
+}
+
+#logo{
+    float: left;
+    display: inline-block;
+    zoom: 0.3;
+}
+
+.top-top{
+    width: 100%;
+    background-color: #222222;
+}
+
+.top-bottom{
+    width: 100%;
+    background-color: #ddd;
+    padding-bottom: 10px;
+}
+
+html, body, #map-canvas{
+  height:100%;
+  width: 100%;
+  padding: 0px;
+}
+
+#menu-icon{
+  float: right;
+  padding-top: 15px;
+}
+
+.small-pic{
+    max-width: 150px;
+}
+
+.css-slideshow{
+   position: relative;
+   max-width: 495px;
+   height: 370px;
+   margin: 5em auto .5em auto;
+}
+.css-slideshow figure{
+   margin: 0;
+   position: absolute;
+}
+.css-slideshow figcaption{
+   position: absolute;
+   top: 0;
+   color: #fff;
+   background: rgba(0,0,0, .3);
+   font-size: .8em;
+   padding: 8px 12px;
+   opacity: 0;
+   transition: opacity .5s;
+}
+.css-slideshow:hover figure figcaption{
+   transition: opacity .5s;
+   opacity: 1;
+}
+.css-slideshow figure{
+   opacity:0;
+}
