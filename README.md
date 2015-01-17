@@ -1,5 +1,5 @@
 # Puget Experience
-
+This is a web app for the University of Puget Sound's Admissions department.
 ## Installation
 
 Run the following commands to install the app

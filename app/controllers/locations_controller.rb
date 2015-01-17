@@ -28,7 +28,7 @@ class LocationsController < ApplicationController
     
     @location = Location.find(params[:id])
     
-
+    #If we have a previous location, draw a path from it.
     if session[:previous] == nil
       @previous_location = nil
     else
