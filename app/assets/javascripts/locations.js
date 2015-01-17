@@ -1,10 +1,11 @@
 //=require jquery
-//=require ninja-slider2
+//=require ninja-slider
 var map;
 var markers;
 var currentLocation;
 var previousLocation;
 var allLocations;
+var visitedLocations;
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var nextLocation;
@@ -44,11 +45,20 @@ function getMapMarkers(locations){
      
 
         //var curMarker
+	var curIcon;
+	if(visitedLocations.indexOf(i) === -1){
+	    console.log("looking for index: " + i);
+	    console.log(visitedLocations.indexOf(i.toString()));
+	    curIcon = tourIcons['visited_icon'];
+	}else{
+	    console.log("Hello world");
+	    curIcon = tourIcons['visited_icon'];
+	}
          markers[i] = new google.maps.Marker({
              map: map,
              draggable: false,
              position: curLatLng,
-	     icon: getMarkerImage(tourIcons['unvisited_icon'])
+	     icon: getMarkerImage(curIcon)
         });
 
         //markerToLocation[curMarker] = locations[i];
@@ -66,7 +76,6 @@ function getMarkerImage(icon){
 	null,
 	new google.maps.Point(icon.anchor[0],icon.anchor[1]),
 	new google.maps.Size(icon.size[0], icon.size[1]));
-
 }
 
 function getTourIcons(){
@@ -101,7 +110,7 @@ function getRoute(startLocation, endLocation, curMarker){
     //console.log(startLocation);
     //console.log('endLocation');
     //console.log(endLocation);
-    console.log(curMarker);
+  //  console.log(curMarker);
     if(startLocation === undefined || endLocation === undefined) return;
     return function(){
 	resetMarkers();
@@ -109,8 +118,8 @@ function getRoute(startLocation, endLocation, curMarker){
         var start = new google.maps.LatLng(parseFloat(startLocation.latitude, 10), parseFloat(startLocation.longitude, 10));
         var end = new google.maps.LatLng(parseFloat(endLocation.latitude, 10), parseFloat(endLocation.longitude, 10));
 	
-        console.log(start);
-        console.log(end);
+     //   console.log(start);
+       // console.log(end);
 	
         //create our request object
         var request = {
@@ -165,24 +174,17 @@ function getMarkerForGivenLocation(location){
 	    return markers[i];
 	}
     }
-    //the comments below can probably be deleted but I'm not 100% sure.
-/*
-    var tempLon = parseFloat(location.longitude, 10);
-    var tempLat = parseFloat(location.latitude, 10);
-    for(var i = 0; i < markers.length; i++){
-        var curLon = parseFloat(allLocations[i].longitude, 10);
-        var curLat = parseFloat(allLocations[i].latitude, 10);
-	
-        if(tempLon === curLon && tempLat === curLat){
-            return markers[i];
-        }
-    }
-*/
+    
+
 }
 
 function resetMarkers(){
     for(var i = 0; i < markers.length; i++){
-	markers[i].setIcon(getMarkerImage(tourIcons['unvisited_icon']));
+	if(visitedLocations.indexOf(i) === -1){
+	    markers[i].setIcon(getMarkerImage(tourIcons['unvisited_icon']));
+	}else{
+	    markers[i].setIcon(getMarkerImage(tourIcons['grey_visited_icon']));
+	}
     }
 }
 
@@ -190,6 +192,11 @@ $(document).ready(function(){
     currentLocation = $("#current-location").data('location');
     previousLocation = $("#previous-location").data('previous-location');
     allLocations = $("#all-locations").data('locations');
+    visitedLocations = $("#visited-locations").data('visited-locations');
+
+    console.log("Visited Locations");
+    console.log(visitedLocations);
+
 
     tourIcons = getTourIcons();
 
@@ -215,34 +222,7 @@ $(document).ready(function(){
     firstMarker = getMarkerForGivenLocation(currentLocation);
     previousMarker = getMarkerForGivenLocation(previousLocation);
 
-    /*
-    //this is a painfully roundabout way of finding the current location's
-    //marker but I couldn't find a better way
-    var tempLon = parseFloat(currentLocation.longitude, 10);
-    var tempLat = parseFloat(currentLocation.latitude, 10);
-    for(var i = 0; i < markers.length; i++){
-        var curLon = parseFloat(allLocations[i].longitude, 10);
-        var curLat = parseFloat(allLocations[i].latitude, 10);
-
-        if(tempLon === curLon && tempLat === curLat){
-            firstMarker = markers[i];
-            break;
-        }
-    }
-
-    tempLon = parseFloat(previousLocation.longitude, 10);
-    tempLat = parseFloat(previousLocation.latitude, 10);
-    for(var j = 0; j < markers.length; j++){
-        var curLon = parseFloat(allLocations[i].longitude, 10);
-        var curLat = parseFloat(allLocations[i].latitude, 10);
-
-        if(tempLon === curLon && tempLat === curLat){
-            previousMarker = markers[i];
-            break;
-            }
-
-	}
-    */
+    
 
     console.log(previousLocation);
 

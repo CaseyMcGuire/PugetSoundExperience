@@ -5,8 +5,9 @@ Rails.application.routes.draw do
 
   get '/tour/:id', to: 'locations#map', as: 'location'
   get '/tour_stop/:id', to: 'locations#info', as:'tour_stop'
-
+ 
   get 'tour' => 'locations#menu'
+  get 'start_tour' => 'locations#start'
 
   get '/highlights', to: "highlights#show"
 
